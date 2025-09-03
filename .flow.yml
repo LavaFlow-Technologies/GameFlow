@@ -1,0 +1,6 @@
+LavaFlow:
+  Name: GameFlow
+  Objects:
+    - Scene
+    - Canvas
+    - Screen

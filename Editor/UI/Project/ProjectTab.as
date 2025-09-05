@@ -2,6 +2,11 @@
 
 shared class ProjectTab : Tab
 {
+    ProjectTab()
+    {
+
+    }
+
     void OnSelect()
     {
         

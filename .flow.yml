@@ -1,5 +1,6 @@
 LavaFlow:
   Name: GameFlow
+  Uploaded: true
   Objects:
     - Scene
     - Canvas

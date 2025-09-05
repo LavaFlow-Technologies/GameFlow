@@ -1,5 +1,4 @@
-#include "../../../../../../Magma/scripts/UI/Tab.as"
-
+#include "Magma/UI/Tab.as"
 
 shared class ProjectTab : Tab
 {

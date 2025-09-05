@@ -1,14 +1,16 @@
+#include "Magma/UI/Panel.as"
+
 #include "Ash/Asset.as"
 
-class ContentBrowserPanel : ObjectPanel
+class ContentBrowserPanel : Panel
 {
     // UI::Image @FileIcon;
     // UI::Image @FolderIcon;
-    bool Selecting = false;
-    uint32 SelectionID = 0;
-    AssetType SelectionType = AssetType::None;
-    Asset Selection;
-    Vec2 Position;
+    // bool Selecting = false;
+    // uint32 SelectionID = 0;
+    // AssetType SelectionType = AssetType::None;
+    // Asset Selection;
+    // Vec2 Position;
 
     ContentBrowserPanel()
     {
@@ -33,7 +35,7 @@ class ContentBrowserPanel : ObjectPanel
 
     void OnRender()
     {
-        Widget.Begin("Content Browser");
+        // Widget.Begin("Content Browser");
 
         // Widget.Child("File Hierarchy", 300, 0)
         //     .With(ChildFlagNamedMenuBar)
@@ -64,42 +66,42 @@ class ContentBrowserPanel : ObjectPanel
         // if(Selecting)
         //     DrawAssetSelectWindow();
 
-        Widget.End();
+        // Widget.End();
     }
 
-    void TraverseFolder(path entry)
-    {
-        // List<path> folders;
-        // List<path> files;
+    // void TraverseFolder(path entry)
+    // {
+    //     List<path> folders;
+    //     List<path> files;
 
-        // if(entry.IsDirectory())
-        // {
-        //     bool open =
-        //         Widget.Node(entry)
-        //             .With(TreeNodeFlagSpan | TreeNodeFlagBullet);
-        //     if(!open)
-        //         return;
+    //     if(entry.IsDirectory())
+    //     {
+    //         bool open =
+    //             Widget.Node(entry)
+    //                 .With(TreeNodeFlagSpan | TreeNodeFlagBullet);
+    //         if(!open)
+    //             return;
 
-        //     FileUtils::ForEach(entry)
-        //     .Do(
-        //         function(str)
-        //         {
-        //             if(str.IsDirectory())
-        //                 folders.Add(str);
-        //             else
-        //                 files.Add(str);
-        //         });
-        // }
-        // else
-        // {
+    //         FileUtils::ForEach(entry)
+    //         .Do(
+    //             function(str)
+    //             {
+    //                 if(str.IsDirectory())
+    //                     folders.Add(str);
+    //                 else
+    //                     files.Add(str);
+    //             });
+    //     }
+    //     else
+    //     {
 
-        // }
+    //     }
 
-        // Widget.Hierarchy(TraverseFolder, folders, files);
+    //     Widget.Hierarchy(TraverseFolder, folders, files);
 
-        // if(entry.IsDirectory())
-        //     Widget.EndNode();
-    }
+    //     if(entry.IsDirectory())
+    //         Widget.EndNode();
+    // }
 
     void RenderAssetTable()
     {
@@ -120,7 +122,7 @@ class ContentBrowserPanel : ObjectPanel
 
     void DrawAssetSelectWindow()
     {
-        Widget.Begin();
+        // Widget.Begin();
 
         // if(Selection.ID)
         // {
@@ -155,46 +157,46 @@ class ContentBrowserPanel : ObjectPanel
         //     Selecting = false;
         // }
 
-        Widget.End();
+        // Widget.End();
     }
 
     void Select(AssetType type, uint32 id)
     {
-        Selecting = true;
-        SelectionType = type;
-        SelectionID = id;
-        Position = Widget.GetCursorPos();
+        // Selecting = true;
+        // SelectionType = type;
+        // SelectionID = id;
+        // Position = Widget.GetCursorPos();
 
-        if(Position.y + 170.0f > Widget.DisplaySize.y)
-            Position.y -= 171.0f;
-        if(Position.x + 130.0f > Widget.DisplaySize.x)
-            Position.x -= 131.0f;
+        // if(Position.y + 170.0f > Widget.DisplaySize.y)
+        //     Position.y -= 171.0f;
+        // if(Position.x + 130.0f > Widget.DisplaySize.x)
+        //     Position.x -= 131.0f;
     }
 
     void CancelSelect()
     {
-        Selecting = false;
-        SelectionType = AssetType::None;
-        SelectionID = 0;
-        Selection = Asset();
+        // Selecting = false;
+        // SelectionType = AssetType::None;
+        // SelectionID = 0;
+        // Selection = Asset();
     }
 
     bool IsSelecting()
     {
-        return Selecting;
+        // return Selecting;
     }
 
     bool HasSelection(uint32 id)
     {
-        return !Selecting && Selection.ID && SelectionID == id;
+        // return !Selecting && Selection.ID && SelectionID == id;
     }
 
     Asset GetSelection()
     {
-        Asset asset = Selection;
-        Selection = Asset();
-        SelectionID = 0;
-        SelectionType = AssetType::None;
-        return asset;
+        // Asset asset = Selection;
+        // Selection = Asset();
+        // SelectionID = 0;
+        // SelectionType = AssetType::None;
+        // return asset;
     }
 }

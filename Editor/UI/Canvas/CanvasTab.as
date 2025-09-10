@@ -1,8 +1,8 @@
-#include "Magma/UI/Panel.as"
+#include "Magma/UI/Tab.as"
 
-class AssetEditorPanel : Panel
+shared class CanvasTab : Tab
 {
-    AssetEditorPanel()
+    CanvasTab()
     {
 
     }
@@ -13,6 +13,16 @@ class AssetEditorPanel : Panel
     }
 
     void OnClose()
+    {
+
+    }
+
+    void OnSelect()
+    {
+        
+    }
+
+    void OnDeselect()
     {
 
     }

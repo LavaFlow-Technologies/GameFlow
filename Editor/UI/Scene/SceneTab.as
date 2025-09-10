@@ -1,26 +1,36 @@
-#include "Magma/UI/Object.as"
+#include "Magma/UI/Tab.as"
 
-#include "Scene.as"
+// #include "Scene.as"
 
-shared class SceneTab : ObjectTab
+shared class SceneTab : Tab
 {
-    Scene Context;
+    // Scene Context;
 
     SceneTab()
     {
 
     }
 
-    SceneTab(string path)
+    void OnOpen()
+    {
+
+    }
+
+    void OnClose()
     {
 
     }
 
     void OnSelect()
     {
-        SceneVisualizerPanel@ panel = GetPanel("SceneVisualizer");
-        EditorSceneRenderer@ renderer = Editor.GetObjectRenderer("Scene");
-        renderer.SetContext(panel);
+        // SceneVisualizerPanel@ panel = GetPanel("SceneVisualizer");
+        // EditorSceneRenderer@ renderer = Editor.GetObjectRenderer("Scene");
+        // renderer.SetContext(panel);
+    }
+
+    void OnDeselect()
+    {
+
     }
 
     void OnUpdate(float ts)
@@ -28,7 +38,7 @@ shared class SceneTab : ObjectTab
         
     }
 
-    void Setup()
+    void OnRender()
     {
 
     }

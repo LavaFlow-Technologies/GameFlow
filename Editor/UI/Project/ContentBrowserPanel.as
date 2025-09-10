@@ -1,6 +1,6 @@
 #include "Magma/UI/Panel.as"
 
-#include "Ash/Asset.as"
+// #include "Ash/Asset.as"
 
 class ContentBrowserPanel : Panel
 {

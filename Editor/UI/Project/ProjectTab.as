@@ -1,20 +1,15 @@
 #include "Magma/UI/Tab.as"
 
-shared class ProjectTab : Tab
+class ProjectTab : Tab
 {
     ProjectTab()
     {
 
     }
 
-    void OnSelect()
+    void OnOpen()
     {
-        
-    }
-
-    void OnDeselect()
-    {
-
+        Name = "Project";
     }
 
     void OnClose()
@@ -22,9 +17,21 @@ shared class ProjectTab : Tab
 
     }
 
-    void OnUpdate(float ts)
+    void OnSelect()
     {
 
+    }
+
+    void OnDeselect()
+    {
+
+    }
+
+    void OnUpdate(float ts)
+    {
+        // Widget.Begin();
+
+        // Widget.End();
     }
 
     void OnRender()

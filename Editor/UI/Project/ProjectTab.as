@@ -29,13 +29,15 @@ class ProjectTab : Tab
 
     void OnUpdate(float ts)
     {
-        // Widget.Begin();
 
-        // Widget.End();
     }
 
     void OnRender()
     {
-
+        Widget::Window()
+        .Render(function()
+        {
+            
+        });
     }
 }

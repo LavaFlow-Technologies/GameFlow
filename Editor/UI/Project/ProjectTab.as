@@ -34,7 +34,7 @@ class ProjectTab : Tab
 
     void OnRender()
     {
-        Widget::Window()
+        Widget::Window("ProjectWindow")
         .Render(function()
         {
             

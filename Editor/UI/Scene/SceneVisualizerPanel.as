@@ -63,8 +63,8 @@ shared class SceneVisualizer : Panel
 
     }
 
-    void Add(Entity entity)
-    {
+    // void Add(Entity entity)
+    // {
 
-    }
+    // }
 }

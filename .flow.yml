@@ -1,12 +1,12 @@
 LavaFlow:
   Components:
-    - Andesite
-    - Ash
-    - Cinder
-    - Igneous
-    - Mica
-    - Pyro
-    - Silica
+    - LavaFlow-Tech/Andesite
+    - LavaFlow-Tech/Ash
+    - LavaFlow-Tech/Cinder
+    - LavaFlow-Tech/Igneous
+    - LavaFlow-Tech/Mica
+    - LavaFlow-Tech/Pyro
+    - LavaFlow-Tech/Silica
   Objects:
     - Project
     - Scene

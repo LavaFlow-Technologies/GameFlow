@@ -1,10 +1,10 @@
 #include "Magma/UI/Tab.as"
 
-// #include "Scene.as"
+#include "Scene.as"
 
 shared class SceneTab : Tab
 {
-    // Scene Context;
+    Scene Context;
 
     SceneTab()
     {
@@ -23,9 +23,9 @@ shared class SceneTab : Tab
 
     void OnSelect()
     {
-        // SceneVisualizerPanel@ panel = GetPanel("SceneVisualizer");
-        // EditorSceneRenderer@ renderer = Editor.GetObjectRenderer("Scene");
-        // renderer.SetContext(panel);
+        SceneVisualizerPanel@ panel = GetPanel("SceneVisualizer");
+        EditorSceneRenderer@ renderer = Editor.GetObjectRenderer("Scene");
+        renderer.SetContext(panel);
     }
 
     void OnDeselect()

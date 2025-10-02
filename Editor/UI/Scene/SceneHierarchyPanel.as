@@ -1,9 +1,9 @@
 #include "Magma/UI/Panel.as"
-// #include "Magma/ECS/Entity.as"
+#include "Magma/ECS/Entity.as"
 
 shared class SceneHierarchy : Panel
 {
-    // Entity Selected;
+    Entity Selected;
 
     SceneHierarchy()
     {
@@ -27,26 +27,26 @@ shared class SceneHierarchy : Panel
 
     void OnRender()
     {
-        // Widget.Begin();
+        Widget.Begin();
 
-        // if(Widget.Clicked())
-        // {
-        //     Selected = Entity();
-        //     ComponentEditor@ editor = Editor.GetTab("Scene").GetPanel("ComponentEditor");
-        //     SceneVisualizer@ visualizer = Editor.GetTab("Scene").GetPanel("SceneVisualizer");
-        //     editor.Select(Selected);
-        //     visualizer.Select(Selected);
-        // }
+        if(Widget.Clicked())
+        {
+            Selected = Entity();
+            ComponentEditor@ editor = Editor.GetTab("Scene").GetPanel("ComponentEditor");
+            SceneVisualizer@ visualizer = Editor.GetTab("Scene").GetPanel("SceneVisualizer");
+            editor.Select(Selected);
+            visualizer.Select(Selected);
+        }
 
-        // if(Widget.Clicked(1))
-        //     Widget.OpenPopup("Options");
+        if(Widget.Clicked(1))
+            Widget.OpenPopup("Options");
 
-        // if(Widget.Popup("Options"))
-        // {
+        if(Widget.Popup("Options"))
+        {
 
-        //     Widget.EndPopup();
-        // }
+            Widget.EndPopup();
+        }
 
-        // Widget.End();
+        Widget.End();
     }
 }
